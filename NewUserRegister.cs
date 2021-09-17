@@ -13,7 +13,7 @@ namespace Moneygaming
         }
 
         [Test]
-        public void NewUserRegister()
+        public void CheckDobErrMessage_atNewRegistration()
         {
             IWebDriver webDriver = new ChromeDriver();
             webDriver.Navigate().GoToUrl("https://moneygaming.qa.gameaccount.com/");
