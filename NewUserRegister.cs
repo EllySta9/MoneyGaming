@@ -29,7 +29,7 @@ namespace Moneygaming
             webDriver.FindElement(By.Id("form")).Click();
             var ActualErrMessageDoB = webDriver.FindElement(By.XPath("//*[@id='signupForm']/fieldset/label[contains(@for, 'dob')]")).Text;
             var ExpectedErrMessageDob = "This field is required";
-            Assert.AreEqual(ActualErrMessageDoB, ExpectedErrMessageDob);
+            Assert.AreEqual(ExpectedErrMessageDob, ActualErrMessageDoB);
         }
     }
 }
