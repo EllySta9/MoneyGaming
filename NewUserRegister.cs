@@ -13,19 +13,16 @@ namespace Moneygaming
         }
 
         [Test]
-        public void Test1()
+        public void NewUserRegister()
         {
             IWebDriver webDriver = new ChromeDriver();
             webDriver.Navigate().GoToUrl("https://moneygaming.qa.gameaccount.com/");
             webDriver.Manage().Window.FullScreen();
-
             IWebElement JoinNowButton = webDriver.FindElement(By.CssSelector("[href*='/sign-up.shtml']"));
             JoinNowButton.Click();
-
             IWebElement TitleDropDown = webDriver.FindElement(By.Id("title"));
             SelectElement SelectTitle = new SelectElement(TitleDropDown);
             SelectTitle.SelectByText("Mrs");
-
             webDriver.FindElement(By.Id("forename")).SendKeys("Elena");
             webDriver.FindElement(By.Name("map(lastName)")).SendKeys("Staneva");
             webDriver.FindElement(By.Name("map(terms)")).Click();
